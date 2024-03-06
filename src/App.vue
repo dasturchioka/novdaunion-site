@@ -17,8 +17,16 @@ const size = computed(() => Math.max(300 - distance.value / 3, 150));
 const opacity = computed(() => Math.min(Math.max(size.value / 300, 0.7), 1));
 
 const logo = ref<HTMLElement>();
+const text = ref<HTMLElement>();
 const logoGradient = computed(() => {
   let rect = logo.value?.getBoundingClientRect();
+  const xPos = x.value - (rect?.left ?? 0);
+  const yPos = y.value - (rect?.top ?? 0);
+
+  return `radial-gradient(circle at ${xPos}px ${yPos}px, black 30%, transparent 100%)`;
+});
+const textGradient = computed(() => {
+  let rect = text.value?.getBoundingClientRect();
   const xPos = x.value - (rect?.left ?? 0);
   const yPos = y.value - (rect?.top ?? 0);
 
@@ -51,8 +59,10 @@ const logoGradient = computed(() => {
       <CompanyLogo />
     </a>
     <p
-      :style="{ maskImage: logoGradient }"
-      ref="logo"
+      ref="text"
+      :style="{
+        maskImage: textGradient,
+      }"
       class="text-white mb-10 text-lg"
     >
       Minimalistic things for minimalistic people.
