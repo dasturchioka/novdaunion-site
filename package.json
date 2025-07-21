@@ -27,5 +27,8 @@
 		"@types/three": "^0.178.1",
 		"tailwindcss": "^4",
 		"typescript": "^5"
-	}
+	},
+  "engines": {
+    "node": "^22"
+  }
 }
