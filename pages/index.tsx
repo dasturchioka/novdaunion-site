@@ -14,7 +14,7 @@ export default function HomePage() {
 			/>
 			<div className='h-screen flex items-center justify-center'>
 				<div className='bg fixed inset-0 w-full h-screen'>
-					<Silk speed={5} scale={1} color='#121212' noiseIntensity={1.5} rotation={0} />
+					<Silk speed={5} scale={1} color='#263BB5' noiseIntensity={1.5} rotation={0} />
 				</div>
 				<div className='logo'>
 					<div className='logo-container relative flex flex-col items-center justify-center'>
