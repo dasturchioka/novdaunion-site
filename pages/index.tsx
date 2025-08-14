@@ -4,11 +4,12 @@ import NovdaLogo from '../public/novda-logo.svg'
 import Silk from '@/components/silk'
 import Seo from '../components/seo'
 
-
 export default function HomePage() {
 	return (
 		<>
-			<div>Failed organization.</div>
+			<div className='h-screen w-full text-center flex items-center justify-center'>
+				Failed organization.
+			</div>
 		</>
 	)
 }
